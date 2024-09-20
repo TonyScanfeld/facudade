@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento dom</title>
+</head>
+<body>
+    <h1>usando seletor do DOM</h1>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>NodeJS</li>
+        </ul>
+
+    <div id="conteudo" name="divconteudo" class="mensagem" >
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+        
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+    </div>
+
+    <span id="novospan" class="novo">
+        que se foda tenha um Limão
+    </span>
+
+    <div class="mensagem">
+
+    </div>
+
+</body>
+<script>
+    elemento0 = document.getElementsByTagName('li')[0];
+    elemento0.style.color = 'blue'
+    
+    elemento1 = document.getElementsByTagName('li')[1];
+    elemento1.style.background = 'red'
+
+    elemento2 = document.getElementsByTagName('li')[2];
+    elemento2.innerText = 'sprigboot'
+
+    elementoDiv = document.getElementById('conteudo');
+    elementoDiv.innerHTML = "<p>Eu Te Amo</p>"
+
+    elementoDivName = document.getElementsByName("divconteudo")[1];
+    elementoDivName.style.color = 'blue'
+    elementoDivName.innerText = "Tenha um Limão"
+
+    elementoDivClass = document.getElementsByClassName("mensagem")[2];
+    elementoDivClass.innerHTML = "<p>Eu Te Amo2</p>"
+
+    elementoSpanClass = document.querySelector("#novospan");
+    elementoSpanClass.style.color = "yellow";
+
+    elementoSeletor = document.querySelectorAll('.mensagem')[3];
+    elementoSeletor.innerHTML = "<p> testo incluido </p>"
+
+
+
+</script>
+</html>
